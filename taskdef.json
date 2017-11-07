@@ -1,0 +1,18 @@
+{
+    "family": "zupa-backend-task",
+    "containerDefinitions": [
+        {
+            "image": "%REPOSITORY_URI%:v%BUILD_NUMBER%",
+            "name": "zupa-backend",
+            "cpu": 10,
+            "memory": 256,
+            "essential": true,
+            "portMappings": [
+                {
+                    "containerPort": 8080,
+                    "hostPort": 80
+                }
+            ]
+        }
+    ]
+}
